@@ -5,19 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Posts</title>
-  <meta property="og:title" content="Posts" />
-  <meta name="twitter:title" content="Posts" />
+  <title>Radical Laptop Revamp (Pt 2)</title>
+  <meta property="og:title" content="Radical Laptop Revamp (Pt 2)" />
+  <meta name="twitter:title" content="Radical Laptop Revamp (Pt 2)" />
+  <meta name="description" content="Installing NixOS">
+  <meta property="og:description" content="Installing NixOS">
+  <meta name="twitter:description" content="Installing NixOS">
   <meta name="author" content="Chris Duncan"/>
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@@celldee" />
   <meta name="twitter:creator" content="@@celldee" />
-  <meta property="og:url" content="https://celldee.github.io/post/" />
+  <meta property="og:url" content="https://celldee.github.io/post/radical-revamp-pt2/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Knowledge is Experiment" />
 
   <meta name="generator" content="Hugo 0.24.1" />
-  <link rel="canonical" href="https://celldee.github.io/post/" />
+  <link rel="canonical" href="https://celldee.github.io/post/radical-revamp-pt2/" />
   <link rel="alternate" href="https://celldee.github.io/index.xml" type="application/rss+xml" title="Knowledge is Experiment">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -122,14 +125,37 @@
 
 
     
+  
+  
+  
+
+
+
+
+  
+
   <header class="header-section ">
+    
     <div class="intro-header no-img">
+      
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
-              <h1>Posts</h1>
-              <hr class="small">
+            <div class="post-heading">
+              <h1>Radical Laptop Revamp (Pt 2)</h1>
+                
+                  
+                    <h2 class="post-subheading">Installing NixOS</h2>
+                  
+                
+                
+                  <span class="post-meta">
+  Posted on July 9, 2017
+  
+</span>
+
+
+                
             </div>
           </div>
         </div>
@@ -137,66 +163,54 @@
     </div>
   </header>
 
+
     
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>This is the second of my &ldquo;Radical Revamp&rdquo; posts. The following are the steps that I took to install NixOS 17.03:</p>
+
+<ol>
+<li><p>Find some useful information. For me, the <a href="https://nixos.org/nixos/manual/">NixOS manual</a> and <a href="https://gist.github.com/martijnvermaat/76f2e24d0239470dd71050358b4d5134">this gist</a> were my main resources.</p></li>
+
+<li><p>Download a version of NixOS from the download page. I chose the &lsquo;Graphical Live CD&rsquo; so that I could get an impression of what a working NixOS set up looked like.</p></li>
+
+<li><p>Create a bootable USB from the downloaded image.</p></li>
+
+<li><p>Partition the hard drive(s). This is a manual process and I followed the partition scheme described in the gist mentioned above, including LUKS encryption.</p></li>
+
+<li><p>Mount partitions.</p></li>
+
+<li><p>Make sure that WiFi is working so that downloads can be performed during installation.</p></li>
+
+<li><p>Generate NixOS configuration file and modify it as required.</p></li>
+
+<li><p>Install NixOS by running the <code>nixos-install</code> command and then reboot.</p></li>
+</ol>
+
+<p>If all goes according to plan then you should be able to boot into a basic console.</p>
+
+<p>In the next post I will describe what I had to add to the <strong>configuration.nix</strong> file to get things like the touchpad working and how I configured <a href="http://swaywm.org">Sway</a> to get my minimal desktop.</p>
+
+      </article>
+
+      <ul class="pager blog-pager">
         
-        <div class="posts-list">
-          
-            <article class="post-preview">
-              <a href="https://celldee.github.io/post/radical-revamp-pt2/">
-                <h2 class="post-title">Radical Laptop Revamp (Pt 2)</h2>
-    
-                
-                  <h3 class="post-subtitle">
-                    Installing NixOS
-                  </h3>
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on July 9, 2017
-              </p>
-              <div class="post-entry">
-                
-                  This is the second of my &ldquo;Radical Revamp&rdquo; posts. The following are the steps that I took to install NixOS 17.03:
- Find some useful information. For me, the NixOS manual and this gist were my main resources.
- Download a version of NixOS from the download page. I chose the &lsquo;Graphical Live CD&rsquo; so that I could get an impression of what a working NixOS set up looked like.
-                  <a href="https://celldee.github.io/post/radical-revamp-pt2/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
-              
-    
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://celldee.github.io/post/radical-revamp-pt1/">
-                <h2 class="post-title">Radical Laptop Revamp (Pt 1)</h2>
-    
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on July 7, 2017
-              </p>
-              <div class="post-entry">
-                
-                  I have tried a number of Linux distros over the years and most recently was happily using Ubuntu 16.04 when I decided to give my laptop a complete revamp. Having read about tiling window managers a while ago, I had already installed i3 and was pleased with the results. But then I read about NixOS and Wayland which prompted the thought - could I install NixOS and a Wayland window manager as the basis of a usable but stripped down set up?
-                  <a href="https://celldee.github.io/post/radical-revamp-pt1/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
-              
-    
-            </article>
-          
-        </div>
+          <li class="previous">
+            <a href="https://celldee.github.io/post/radical-revamp-pt1/" data-toggle="tooltip" data-placement="top" title="Radical Laptop Revamp (Pt 1)">&larr; Previous Post</a>
+          </li>
         
-      </div>
+        
+      </ul>
+
+      
+        
+      
+
     </div>
   </div>
+</div>
 
     <footer>
   <div class="container">
